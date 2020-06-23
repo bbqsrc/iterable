@@ -69,7 +69,8 @@ namespace Iterable
                 }
             }
         }
-
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<U> FilterMap<T, U>(this IEnumerable<T> enumerable, Func<T, U?> selector)
             where U : class {
             foreach (var element in enumerable) {
@@ -81,6 +82,7 @@ namespace Iterable
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<U> FilterMap<T, U>(this IEnumerable<T> enumerable, Func<T, U?> selector)
             where U: struct
         {
@@ -93,6 +95,7 @@ namespace Iterable
             }
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<U> FilterMap<T, U>(this IEnumerable<T> enumerable, Func<T, uint, U?> selector) where U: class {
             uint index = 0;
             
@@ -109,6 +112,7 @@ namespace Iterable
             }
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<U> FilterMap<T, U>(this IEnumerable<T> enumerable, Func<T, uint, U?> selector)
             where U: struct 
         {
@@ -190,6 +194,7 @@ namespace Iterable
             return output;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Dictionary<K, V> ToDict<K, V>(this IEnumerable<Tuple<K, V>> enumerable) where K: notnull {
             var output = new Dictionary<K, V>();
             
@@ -200,6 +205,7 @@ namespace Iterable
             return output;
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static Dictionary<K, V> ToDict<K, V>(this IEnumerable<(K, V)> enumerable) where K: notnull {
             var output = new Dictionary<K, V>();
             
@@ -210,7 +216,7 @@ namespace Iterable
             return output;
         }
         
-        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SortedDictionary<K, V> ToSortedDict<K, V>(this IEnumerable<Tuple<K, V>> enumerable) where K: notnull {
             var output = new SortedDictionary<K, V>();
             
@@ -221,6 +227,7 @@ namespace Iterable
             return output;
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static SortedDictionary<K, V> ToSortedDict<K, V>(this IEnumerable<(K, V)> enumerable) where K: notnull {
             var output = new SortedDictionary<K, V>();
             
@@ -231,6 +238,7 @@ namespace Iterable
             return output;
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ImmutableDictionary<K, V> ToImmutableDict<K, V>(this IEnumerable<(K, V)> enumerable) where K: notnull {
             var builder = ImmutableDictionary.CreateBuilder<K, V>();
             
@@ -241,6 +249,7 @@ namespace Iterable
             return builder.ToImmutable();
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ImmutableList<T> ToImmutableList<T>(this IEnumerable<T> enumerable) where T: notnull {
             var builder = ImmutableList.CreateBuilder<T>();
             
@@ -251,6 +260,7 @@ namespace Iterable
             return builder.ToImmutable();
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ImmutableHashSet<T> ToImmutableSet<T>(this IEnumerable<T> enumerable) where T: notnull {
             var builder = ImmutableHashSet.CreateBuilder<T>();
             
@@ -261,6 +271,7 @@ namespace Iterable
             return builder.ToImmutable();
         }
         
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static ImmutableArray<T> ToImmutableArray<T>(this IEnumerable<T> enumerable) where T: notnull {
             var builder = ImmutableArray.CreateBuilder<T>();
             
