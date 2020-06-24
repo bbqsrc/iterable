@@ -6,7 +6,8 @@
         <PackageId>Iterable</PackageId>
         <PackageDescription>For those who find enumerable to be a synonym for irritable.</PackageDescription>
         <Version>0.1.0</Version>
-        <Authors>Brendan Molloy &lt;brendan@bbqsrc.net&gt;</Authors>
+	<Authors>Brendan Molloy &lt;brendan@bbqsrc.net&gt;</Authors>
+	<Company/>
         <PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/bbqsrc/iterable</RepositoryUrl>
     </PropertyGroup>
