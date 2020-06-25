@@ -8,9 +8,11 @@
         <PackageDescription>For those who find enumerable to be a synonym for irritable.</PackageDescription>
         <Version>0.2.0</Version>
 	<Authors>Brendan Molloy &lt;brendan@bbqsrc.net&gt;</Authors>
-	<Company/>
+	<Company />
         <PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/bbqsrc/iterable</RepositoryUrl>
+        <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
 </Project>
