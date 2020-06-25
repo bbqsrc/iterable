@@ -1,8 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>8</LangVersion>
         <Nullable>enable</Nullable>
         <PackageId>Iterable</PackageId>
         <PackageDescription>For those who find enumerable to be a synonym for irritable.</PackageDescription>
@@ -11,8 +9,12 @@
 	<Company />
         <PackageLicenseExpression>CC0-1.0</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/bbqsrc/iterable</RepositoryUrl>
-        <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
+        <TargetFrameworks>net46;netstandard2.1;netcoreapp3.1</TargetFrameworks>
         <LangVersion>8</LangVersion>
     </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+    </ItemGroup>
 
 </Project>
