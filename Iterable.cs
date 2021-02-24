@@ -60,7 +60,20 @@ namespace Iterable
                 }
             }
         }
-        
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static IEnumerable<U> FlatMap<T, U>(this IEnumerable<T> enumerable, Func<T, IEnumerable<U>> selector)
+        {
+            foreach (var value in enumerable)
+            {
+                var innerEnum = selector(value);
+                foreach (var element in innerEnum)
+                {
+                    yield return element;
+                }
+            }
+        }
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static IEnumerable<T> Flatten<T>(this IEnumerable<IEnumerable<T>> enumerable) {
             foreach (var innerEnum in enumerable) {
